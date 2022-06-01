@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "dev": "npx -y kirbyup src/index.js --watch",
+        "build": "npx -y kirbyup src/index.js"
+    },
+    "dependencies": {
+        "kirbyup": "^0.14.1",
+        "vue-runtime-helpers": "^1.1.2"
+    }
+}
