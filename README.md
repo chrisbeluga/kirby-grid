@@ -4,7 +4,7 @@ A simple grid size selection field for Kirby CMS [Kirby CMS](https://getkirby.co
 
 ## Preview
 
-![](https://github.com/chrisbeluga/kirby-grid/blob/main/screenshot.png)
+![](https://github.com/chrisbeluga/kirby-grid/blob/master/screenshot.png)
 
 ## Output
 
