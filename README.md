@@ -1,6 +1,6 @@
 # Kirby Grid Size Field
 
-A simple grid size selection field for Kirby CMS [Kirby CMS](https://getkirby.com),
+A simple grid size selection field for [Kirby CMS](https://getkirby.com),
 
 ## Preview
 
