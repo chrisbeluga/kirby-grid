@@ -87,7 +87,7 @@ $page->field_name()->grid('class', 'end')
 
 ## Options
 
-| Option | Required | Default | Description |
+| Option | Required | Default Values | Description |
 | ------------- | ------------- | ------------- | ------------- |
 | Options  | false | columns: 12<br/>limit: 0 | Set the number of columns in the grid, a limit can also be set to set the minimum size of the selected grid |
 | Offset  | False | start: 0<br/>end: 0 | An offset can be added for use with CSS frameworks such as tailwind where a 12 column grid would end on 13 not 12. |
