@@ -72,18 +72,18 @@
                 type: Object,
                 required: false,
                 default: () => ({
-                    start: null,
-                    end: null,
-                    span: null,
+                    start: '',
+                    end: '',
+                    span: '',
                 })
             },
             suffix: {
                 type: Object,
                 required: false,
                 default: () => ({
-                    start: null,
-                    end: null,
-                    span: null,
+                    start: '',
+                    end: '',
+                    span: '',
                 })
             }
         },
