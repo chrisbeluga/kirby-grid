@@ -3,6 +3,9 @@
     return [
         'grid' => function($field, $type = null, $option = null) {
 
+            if(!$field->value)
+                return null;
+
             if($type === null || $type !== 'class' && $type !== 'value')
                 throw new Exception('"value" or "class" required for first argument');
 
