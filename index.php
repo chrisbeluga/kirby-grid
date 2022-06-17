@@ -1,34 +1,10 @@
 <?php
 
-    use Kirby\Data\Yaml;
-
-    Kirby::plugin('beluga/belugakit', [
+    Kirby::plugin('beluga/grid', [
         'fields' => [
             'grid' => [
-                'props' => [
-            	    'value' => function ($value = []) {
-            	        return Yaml::decode($value);
-            	    }
-                ]
+                'props' => require_once __DIR__ . '/config/props.php',
+                'fieldMethods' => require_once __DIR__ . '/config/methods.php',
             ]
-        ],
-        'fieldMethods' => [
-            'grid' => function($field, $type = null, $option = null) {
-
-                if(!$field->value)
-                    return null;
-
-                if($type === null || $type !== 'class' && $type !== 'value')
-                    throw new Exception('"value" or "class" required for first argument');
-
-                if($option === null || $option !== 'span' && $option !== 'start' && $option !== 'end')
-                    throw new Exception('"span", "start" or "end" required for second argument');
-
-                $data = Yaml::decode($field->value);
-                $response = $data[$type][$option];
-
-                return $response;
-
-            }
         ]
     ]);
