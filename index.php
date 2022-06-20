@@ -1,15 +1,10 @@
 <?php
 
-    use Kirby\Data\Yaml;
-
-    Kirby::plugin('beluga/belugakit', [
+    Kirby::plugin('beluga/grid', [
         'fields' => [
             'grid' => [
-                'props' => [
-            	    'value' => function ($value = []) {
-            	        return Yaml::decode($value);
-            	    }
-                ]
+                'props' => require_once __DIR__ . '/config/props.php',
             ]
-        ]
+        ],
+        'fieldMethods' => require_once __DIR__ . '/config/methods.php',
     ]);

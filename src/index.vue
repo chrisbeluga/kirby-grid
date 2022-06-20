@@ -15,9 +15,9 @@
                     class="k-grid-item"
                     v-for="(column, index) in options.columns"
                     v-bind:key="column"
-                    v-on:click="in_selection(column)"
+                    v-on:click.prevent="action_click(column)"
                     v-bind:class="{
-                        'k-grid-active' : in_range(column)
+                        'k-grid-active' : action_range(column)
                     }">
                     {{ column }}
                 </button>
@@ -57,7 +57,7 @@
                 required: false,
                 default: () => ({
                     limit: 0,
-                    columns: 12
+                    columns: 12,
                 })
             },
             offset: {
@@ -116,17 +116,17 @@
             }
         },
         methods: {
-            in_selection(data) {
+            action_click(data) {
                 if(data > this.options.columns / 2) data = (this.options.columns - data) + 1
-                if(!this.in_limit(data)) return
+                if(!this.action_limit(data)) return
                 this.grid.start = data
                 this.grid.end = this.options.columns - (data - 1)
                 this.grid.span = this.options.columns - ((this.grid.start - 1) * 2)
             },
-            in_limit(data) {
+            action_limit(data) {
                 return data <= this.options.limit
             },
-            in_range(data) {
+            action_range(data) {
                 return (data - this.grid.start) * ((data - this.grid.end)) <= 0
             }
         },
