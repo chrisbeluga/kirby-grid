@@ -11,14 +11,14 @@ A simple grid size selection field for [Kirby CMS](https://getkirby.com),
 ```json
 {
     "class": {
-      "start": "col-start-4-suffix",
-      "end": "col-end-10-suffix",
-      "span": "col-span-6-suffix"
+      "start": "col-start-3",
+      "end": "col-end-10",
+      "span": "col-span-8"
   },
   "value": {
-      "start": 4,
+      "start": 3,
       "end": 10,
-      "span": 6,
+      "span": 8,
   }
 }
 ```
