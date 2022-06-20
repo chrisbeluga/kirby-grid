@@ -13,12 +13,12 @@ A simple grid size selection field for [Kirby CMS](https://getkirby.com),
     "class": {
       "start": "col-start-3",
       "end": "col-end-10",
-      "span": "col-span-8"
+      "span": "col-span-7"
   },
   "value": {
       "start": 3,
       "end": 10,
-      "span": 8,
+      "span": 7,
   }
 }
 ```
